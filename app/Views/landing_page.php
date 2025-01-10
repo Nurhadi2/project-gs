@@ -275,6 +275,8 @@
                                     color: "blue"
                                 }).addTo(map);
 
+                                
+
                                 // Bind a popup to the polygon with the desired data
                                 var popupContent = "<b>Nama:</b> " + value.nama_lengkap + "<br>" +
                                     "<b>Handphone:</b> " + value.handphone + "<br>" +
@@ -291,9 +293,11 @@
                                 };
                                 markersLayer.addLayer(polygon);
                             }
+
+                            
                         });
                     });
-
+                    
                     // Add search control to the map
                     var searchControl = new L.Control.Search({
                         layer: markersLayer,
@@ -537,7 +541,7 @@
             // Pie Chart Tanam
             var ctx = document.getElementById("myPieChart");
             var myPieChart = new Chart(ctx, {
-                type: "doughnut",
+                type: "bar",
                 data: {
                     labels: namaKecamatanTanam,
                     datasets: [{
@@ -548,7 +552,7 @@
                     }, ],
                 },
                 options: {
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
                     tooltips: {
                         backgroundColor: "rgb(255,255,255)",
                         bodyFontColor: "#858796",
@@ -560,27 +564,32 @@
                         caretPadding: 10,
                     },
                     legend: {
-                        display: true,
+                        display: false,
                     },
                     cutoutPercentage: 80,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    },
                 },
             });
 
             // Pie Chart Panen
             var ctx2 = document.getElementById("myPieChart2");
             var myPieChart2 = new Chart(ctx2, {
-                type: "doughnut",
+                type: "bar",
                 data: {
                     labels: namaKecamatanPanen,
                     datasets: [{
                         data: produksi,
                         backgroundColor: colorPieChart2,
-                        // hoverBackgroundColor: ["#2e59d9", "#17a673", "#2c9faf"],
+                        hoverBackgroundColor: ["#2e59d9", "#17a673", "#2c9faf"],
                         hoverBorderColor: "rgba(234, 236, 244, 1)",
                     }, ],
                 },
                 options: {
-                    maintainAspectRatio: false,
+                    maintainAspectRatio: true,
                     tooltips: {
                         backgroundColor: "rgb(255,255,255)",
                         bodyFontColor: "#858796",
@@ -592,9 +601,14 @@
                         caretPadding: 10,
                     },
                     legend: {
-                        display: true,
+                        display: false,
                     },
                     cutoutPercentage: 80,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                        }
+                    },
                 },
             });
         });

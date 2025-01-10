@@ -136,7 +136,7 @@
         // Pie Chart Tanam
         var ctx = document.getElementById("myPieChart");
         var myPieChart = new Chart(ctx, {
-            type: "doughnut",
+            type: "bar",
             data: {
                 labels: namaKecamatanTanam,
                 datasets: [{
@@ -147,7 +147,7 @@
                 }, ],
             },
             options: {
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 tooltips: {
                     backgroundColor: "rgb(255,255,255)",
                     bodyFontColor: "#858796",
@@ -159,7 +159,7 @@
                     caretPadding: 10,
                 },
                 legend: {
-                    display: true,
+                    display: false,
                 },
                 cutoutPercentage: 80,
             },
@@ -168,7 +168,7 @@
         // Pie Chart Panen
         var ctx2 = document.getElementById("myPieChart2");
         var myPieChart2 = new Chart(ctx2, {
-            type: "doughnut",
+            type: "bar",
             data: {
                 labels: namaKecamatanPanen,
                 datasets: [{
@@ -179,7 +179,7 @@
                 }, ],
             },
             options: {
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 tooltips: {
                     backgroundColor: "rgb(255,255,255)",
                     bodyFontColor: "#858796",
@@ -191,7 +191,7 @@
                     caretPadding: 10,
                 },
                 legend: {
-                    display: true,
+                    display: false,
                 },
                 cutoutPercentage: 80,
             },

@@ -37,6 +37,7 @@
                             <option value="2022" <?php if ($transaksi_panen['tahun'] == '2022') echo 'selected'; ?>>2022</option>
                             <option value="2023" <?php if ($transaksi_panen['tahun'] == '2023') echo 'selected'; ?>>2023</option>
                             <option value="2024" <?php if ($transaksi_panen['tahun'] == '2024') echo 'selected'; ?>>2024</option>
+                            <option value="2025" <?php if ($transaksi_panen['tahun'] == '2025') echo 'selected'; ?>>2025</option>
                         </select>
                     </div>
 
