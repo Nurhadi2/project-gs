@@ -1,0 +1,569 @@
+WARNING - 2024-12-25 05:22:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:22:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-25 05:22:05 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'db_gs' in C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_gs', 3306, '', 0)
+#1 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\sig\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\sig\app\Controllers\Home.php(20): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\laragon\www\sig\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'db_gs' in C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\sig\vendor\codeigniter4\framework\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\sig\app\Controllers\Home.php(20): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\sig\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-12-25 05:22:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'db_gs'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tb_komoditas`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(20): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:23:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:23:46 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-25 05:23:46 --> mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist in C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT\n        ...', 0)
+#1 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 C:\laragon\www\sig\app\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...')
+#4 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\laragon\www\sig\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-12-25 05:23:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:23:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:23:46 --> [Caused by] mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:23:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:23:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-25 05:23:48 --> mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist in C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT\n        ...', 0)
+#1 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 C:\laragon\www\sig\app\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...')
+#4 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\laragon\www\sig\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-12-25 05:23:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:23:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:23:48 --> [Caused by] mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:24:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 05:24:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-25 05:24:21 --> mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist in C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT\n        ...', 0)
+#1 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT\n        ...')
+#2 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT\n        ...')
+#3 C:\laragon\www\sig\app\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT\n        ...')
+#4 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\laragon\www\sig\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\laragon\www\sig\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\laragon\www\sig\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-12-25 05:24:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:24:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-25 05:24:21 --> [Caused by] mysqli_sql_exception: Table 'db_gs.tb_transaksi_tanam' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 4 APPPATH\Controllers\Home.php(22): CodeIgniter\Database\BaseConnection->query('SELECT
+                tb_kecamatan.id_kecamatan,
+                tb_kecamatan.nama_kecamatan,
+                SUM(tb_transaksi_tanam.urea) AS productivitas 
+            FROM
+                tb_transaksi_tanam
+                LEFT JOIN tb_lahan ON tb_transaksi_tanam.id_lahan = tb_lahan.id_lahan
+                LEFT JOIN tb_petani ON tb_lahan.id_petani = tb_petani.id_petani
+                LEFT JOIN tb_kelompok_tani ON tb_petani.id_kelompok_tani = tb_kelompok_tani.id_kelompok_tani
+                LEFT JOIN tb_kecamatan ON tb_kecamatan.id_kecamatan = tb_kelompok_tani.id_kecamatan
+            WHERE tb_transaksi_tanam.bulan = MONTH(CURRENT_DATE)
+            GROUP BY tb_kecamatan.id_kecamatan;')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 13:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 13:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 13:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-12-25 13:40:14 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2024-12-25 13:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-25 13:41:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$komoditasModel is deprecated in APPPATH\Controllers\Home.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\sig\\public\\index.php')
+WARNING - 2024-12-25 13:41:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Home::$lahanModel is deprecated in APPPATH\Controllers\Home.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\sig\\public\\index.php')
+INFO - 2024-12-25 13:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-25 13:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
